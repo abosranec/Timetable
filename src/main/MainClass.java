@@ -6,6 +6,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import java.io.IOException;
+
+import forGetSource.NumberBus;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -28,21 +30,9 @@ public class MainClass {
 //        outFileHTML.close();
 //        in.close();
 
-        ///////////////////////////////////////////////////////////////////////////////////////////////////
-        String html = "http://www.minsktrans.by/mg/suburb.php";
-        try {
-            Document doc = Jsoup.connect(html).get();
-            Elements tableElements = doc.select("select[id=minsk0]");
+//        ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-            Elements tableHeaderEles = tableElements.select("option");
-            for (int i = 0; i < tableHeaderEles.size(); i++) {
-                System.out.println(tableHeaderEles.get(i).text());
-                System.out.println(tableHeaderEles.get(i).attr("value"));
-            }
-            System.out.println();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        NumberBus nb = new NumberBus();
+        System.out.println(nb.toString());
     }
 }
