@@ -37,7 +37,7 @@ public class MainClass {
             Elements tableHeaderEles = tableElements.select("option");
             for (int i = 0; i < tableHeaderEles.size(); i++) {
                 System.out.println(tableHeaderEles.get(i).text());
-                System.out.println(tableHeaderEles.get(i));
+                System.out.println(tableHeaderEles.get(i).attr("value"));
             }
             System.out.println();
 
