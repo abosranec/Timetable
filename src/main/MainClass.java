@@ -34,5 +34,6 @@ public class MainClass {
 
         NumberBus nb = new NumberBus();
         System.out.println(nb.toString());
+        System.out.println(nb.getURL("АтОЛиНО", "сКОрИНиЧИ"));
     }
 }
